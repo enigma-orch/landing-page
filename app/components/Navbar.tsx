@@ -69,11 +69,8 @@ export function Navbar({ revealed = true }: { revealed?: boolean }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="md" className="hidden sm:inline-flex">
-            Sign in
-          </Button>
           <Button variant="ink" size="md">
-            Get the app
+            Join now
           </Button>
         </div>
       </div>
