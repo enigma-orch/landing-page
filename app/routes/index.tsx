@@ -19,7 +19,7 @@ function LandingPage() {
   const [introDone, setIntroDone] = useState(false);
 
   return (
-    <main className="relative overflow-hidden bg-cream-100 text-ink-900">
+    <main className="relative overflow-x-clip bg-cream-100 text-ink-900">
       <IntroSplash onComplete={() => setIntroDone(true)} />
       <Navbar revealed={introDone} />
       <Hero />

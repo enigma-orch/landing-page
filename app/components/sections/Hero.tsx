@@ -81,24 +81,25 @@ export function Hero() {
           {/* Pink ground shadow */}
           <div className="absolute inset-x-6 -bottom-8 -z-10 h-24 rounded-full bg-drip-pink/30 blur-3xl" />
 
-          {/* Left floating chip — calendar */}
+          {/* Left floating chip — calendar. Anchored to the LEFT of the phone
+              with a real gap; only shows when there's room (lg+). */}
           <motion.div
             style={{ y: chipLY }}
             initial={{ opacity: 0, x: -24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute -left-8 top-32 hidden md:block lg:-left-24"
+            className="absolute right-full top-32 mr-6 hidden lg:block xl:mr-10"
           >
             <ChipCalendar />
           </motion.div>
 
-          {/* Right floating chip — music vibe */}
+          {/* Right floating chip — music. Anchored to the RIGHT of the phone. */}
           <motion.div
             style={{ y: chipRY }}
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.85, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute -right-8 top-72 hidden md:block lg:-right-20"
+            className="absolute left-full top-72 ml-6 hidden lg:block xl:ml-10"
           >
             <ChipVibe />
           </motion.div>
